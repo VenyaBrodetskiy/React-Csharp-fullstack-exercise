@@ -1,0 +1,14 @@
+.bg-violet {
+    background-color: rgb(141, 141, 227);
+}
+
+@media only screen and (max-width: 500px) {
+    .section-name{
+        display: none;
+    }
+
+    .side-bar {
+        width: 60px;
+    }
+    
+}
