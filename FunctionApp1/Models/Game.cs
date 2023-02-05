@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace FunctionApp1.Models
+namespace FunctionApp.Models
 {
     public partial class Game
     {

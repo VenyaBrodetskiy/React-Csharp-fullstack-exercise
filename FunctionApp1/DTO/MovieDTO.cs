@@ -1,5 +1,5 @@
 ﻿
-namespace FunctionApp1.DTO
+namespace FunctionApp.DTO
 {
     public record MovieDTO
     {

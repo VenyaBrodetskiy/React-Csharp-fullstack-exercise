@@ -5,12 +5,12 @@ import { Link } from 'react-router-dom';
 import "./style.scss"
 
 export default function SidebarComponent() {
-    const { user } = useAuth0();
+    const { user, logout } = useAuth0();
     return (
         <div className="h-100 bg-violet side-bar">
-            <div className="d-flex flex-column flex-shrink-0 h-100 ">
+            <div className="d-flex flex-shrink-0 h-100 ">
 
-                <ul className="nav nav-pills flex-column">
+                <ul className="nav nav-pills d-flex flex-column">
                     <li className="nav-item my-1 ">
                         <Link to={"/"} className="nav-link text-white">
                             <i className="bi bi-house-door fs-3 me-5 "></i>
@@ -45,6 +45,13 @@ export default function SidebarComponent() {
                         <Link to={"/profile"} className="nav-link text-white">
                             <i className="bi bi-person-circle fs-3 me-5"></i>
                             <span className="fs-4 section-name">{user?.given_name ? user!.given_name : "Profile"}</span>
+                        </Link>
+                    </li>
+
+                    <li className="nav-item mt-auto">
+                        <Link to={"/"} className="nav-link text-white" onClick={() => logout()}>
+                            <i className="bi bi-box-arrow-right fs-3 me-5"></i>
+                            <span className="fs-4 section-name">Logout</span>
                         </Link>
                     </li>
                 </ul>

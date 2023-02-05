@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace FunctionApp1.Models
+namespace FunctionApp.Models
 {
-    public partial class ContactU
+    public partial class ContactUs
     {
         public int Id { get; set; }
         public string Email { get; set; }

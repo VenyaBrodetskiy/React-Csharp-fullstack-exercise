@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace FunctionApp1.Models
+namespace FunctionApp.Models
 {
     public partial class ReactAppDbContext : DbContext
     {
@@ -16,7 +16,7 @@ namespace FunctionApp1.Models
         {
         }
 
-        public virtual DbSet<ContactU> ContactUs { get; set; }
+        public virtual DbSet<ContactUs> ContactUs { get; set; }
         public virtual DbSet<Game> Games { get; set; }
         public virtual DbSet<Movie> Movies { get; set; }
         public virtual DbSet<Rating> Ratings { get; set; }
@@ -32,9 +32,9 @@ namespace FunctionApp1.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<ContactU>(entity =>
+            modelBuilder.Entity<ContactUs>(entity =>
             {
-                entity.HasNoKey();
+                //entity.HasNoKey();
 
                 entity.ToTable("contact_us");
 
